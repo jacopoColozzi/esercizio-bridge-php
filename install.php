@@ -1,14 +1,17 @@
 <?php
-    $nomeDB = "database_esposizione";
-    $connessione = new mysqli("localhost", "root", "");
-
-    if (mysqli_errno($connessione)) {
-        printf("Oops, abbiamo problemi con la connessione al db: %s\n", mysqli_error($connessione));
-        exit();
-    }
+    require_once("connection.php");
 
     $queryCreazioneDatabase = "CREATE DATABASE $nomeDB";
-    if ($connessione->mysqli_query($queryCreazioneDatabase)) {
+    printf($queryCreazioneDatabase);
+    if ($resultQ = mysqli_query($connessione, $queryCreazioneDatabase)) {
+        printf("Database creato ...\n");
+    }
+    else {
+        printf("Whoops! niente creazione del db! Che sara successo??.\n");
+    }
+    // qui vanno inserite le query per creare nuove tabelle e per popolarle
+    $query = "";
+    if ($resultQ = mysqli_query($connessione, $query)) {
         printf("Database creato ...\n");
     }
     else {

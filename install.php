@@ -1,16 +1,18 @@
 <?php
-    $db_creato = true;
-    require_once("connection.php");
+    $db_creato = false;
+    require("connection.php");
 
-   /* $queryCreazioneDatabase = "CREATE DATABASE $nomeDB";
+    $queryCreazioneDatabase = "CREATE DATABASE $nomeDB";
     printf($queryCreazioneDatabase);
     if ($resultQ = mysqli_query($connessione, $queryCreazioneDatabase)) {
         printf("Database creato ...\n");
     }
     else {
         printf("Whoops! niente creazione del db! Che sara successo??.\n");
-    }*/
-    // qui vanno inserite le query per creare nuove tabelle e per popolarle
+    }
+    
+    $db_creato = true;
+    require("connection.php");
     
     $query = "create table $tabellaProdotti ( 
         codice integer NOT NULL auto_increment PRIMARY KEY,
@@ -19,30 +21,44 @@
         prezzo integer
      )";
     if ($resultQ = mysqli_query($connessione, $query)) {
-        printf("Tabella creata ".mysqli_error($connessione));
+        printf("Tabella creata ");
     }
     else {
-        printf("Tabella non creata\n");
+        printf("Tabella non creata\n".mysqli_error($connessione));
     }
 
-    $query1 = "create table $tabellaUtenti ( 
+    $query = "create table $tabellaUtenti ( 
         IdUtente integer NOT NULL auto_increment PRIMARY KEY,
         nome varchar(40) NOT NULL,
         cognome varchar(40) NOT NULL,
+        usarname varchar(40) NOT NULL,
         password varchar (32) NOT NULL, 
         TotaleAquisti float
      )";
     if ($resultQ = mysqli_query($connessione, $query)) {
-        printf("Tabella creata ".mysqli_error($connessione));
+        printf("Tabella creata ");
     }
     else {
-        printf("Tabella non creata\n");
+        printf("Tabella non creata\n".mysqli_error($connessione));
     }
-    $sql = "INSERT INTO $STuser_table_name
-	(IdUtente,nome,cognome, password, sommeSpese,TotaleAquisti)
+    $query = "INSERT INTO $tabellaUtenti
+	(IdUtente,nome,cognome, usarname, password, TotaleAquisti)
 	VALUES
-	(\"1\", \"salomon\", \"atangana\",\"12345\",\"0\")
+	('0', 'salomon', 'atangana', 'atangana95', 'password', '0')
 	";
 
+    eseguiQuery($connessione, $query);
 
+?>
+
+<?php
+    function eseguiQuery($conn, $q) {
+        if ($resultQ = mysqli_query($conn, $q)) {
+            printf("Query eseguita");
+        }
+        else {
+            printf("Query non eseguita\n".mysqli_error($conn));
+        }
+        return $resultQ;
+    }
 ?>

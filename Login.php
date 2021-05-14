@@ -9,14 +9,11 @@
             FROM $tabellaUtenti
     WHERE username = \"{$_POST['username']}\" AND password =\"{$_POST['password']}\" ";
     
-    $resultQ=eseguiQueryDebug($connessione, $qselect);
-
+    $resultQ = mysqli_query($connessione, $qselect);
     $row = mysqli_fetch_array($resultQ);
-    //print_r($row);
+    
     if ($row) {  
-      //echo "Accesso";
       session_start();
-      unset($_SESSION);
       $_SESSION['username']=$_POST['username'];
       $_SESSION['dataLogin']=time();
       $_SESSION['numeroUtente']=$row['IdUtente'];
@@ -31,18 +28,6 @@
 }
 ?>
 
-<?php
-    function eseguiQueryDebug($conn, $q) {
-        if ($resultQ = mysqli_query($conn, $q)) {
-            //printf("Query eseguita");
-        }
-        else {
-            printf("Query non eseguita\n".mysqli_error($conn));
-            printf("Query: ".$q);
-        }
-        return $resultQ;
-    }
-?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 

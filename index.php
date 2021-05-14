@@ -9,14 +9,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <link rel="stylesheet" href="stile.css" type="text/css" media="all">
-        <title>sito di esposizione</title>
+        <title>Sito di esposizione</title>
     </head>
     <body>
         <ul class="navi">
             <li><a class="active" href="index.php">Home</a></li>
             <li><a href="fiori.php">Fiori</a></li>
-            <li><a href="frutte.php">Frutte</a></li>
-            <li><a href="Carta.php">Carta di auguri</a></li>
+            <li><a href="frutta.php">Frutta</a></li>
+            <li><a href="carta.php">Carta di auguri</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
 
         <h2>Benvenuto sul nostro sito di esposizione</h2>

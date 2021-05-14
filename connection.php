@@ -1,6 +1,7 @@
 <?php
     $nomeDB = "database_esposizione";
     $tabellaProdotti = "prodotti";
+    $tabellaUtenti = "utenti";
     if ($db_creato == false) { // Questa variebile va settata prima di "require_once("connection.php");". 
                                 //Di default è falso e verrà quindi creato il db
         echo "connessione no db";

@@ -1,5 +1,5 @@
 <?php
-    $db_creato = false;
+    $db_da_creare = true;
     require("connection.php");
 
     $queryCreazioneDatabase = "CREATE DATABASE $nomeDB";
@@ -11,7 +11,7 @@
         printf("Whoops! niente creazione del db! Che sara successo??.\n");
     }
     
-    $db_creato = true;
+    $db_da_creare = false;
     require("connection.php");
     
     $query = "create table $tabellaProdotti ( 
@@ -31,7 +31,7 @@
         IdUtente integer NOT NULL auto_increment PRIMARY KEY,
         nome varchar(40) NOT NULL,
         cognome varchar(40) NOT NULL,
-        usarname varchar(40) NOT NULL,
+        username varchar(40) NOT NULL,
         password varchar (32) NOT NULL, 
         TotaleAquisti float
      )";
@@ -42,19 +42,20 @@
         printf("Tabella non creata\n".mysqli_error($connessione));
     }
     $query = "INSERT INTO $tabellaUtenti
-	(IdUtente,nome,cognome, usarname, password, TotaleAquisti)
+	(IdUtente,nome,cognome, username, password, TotaleAquisti)
 	VALUES
-	('0', 'salomon', 'atangana', 'atangana95', 'password', '0')
+	('0', 'Salomon', 'Atangana', 'atangana95', 'password', '0')
 	";
 
     eseguiQuery($connessione, $query);
+    eseguiQuery($connessione, "insert into $tabellaUtenti VALUES ('0', 'Jacopo', 'Colozzi', 'jacopo99', 'pass1', '0')");
 
 ?>
 
 <?php
     function eseguiQuery($conn, $q) {
         if ($resultQ = mysqli_query($conn, $q)) {
-            printf("Query eseguita");
+            printf("Query eseguita<br />");
         }
         else {
             printf("Query non eseguita\n".mysqli_error($conn));

@@ -1,5 +1,6 @@
 <?php 
     require_once("connection.php");
+    session_start();
     if (!isset($_SESSION['accessoPermesso'])) header('Location: Login.php');
 
 ?>

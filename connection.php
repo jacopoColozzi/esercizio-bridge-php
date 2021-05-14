@@ -3,7 +3,7 @@
     $tabellaProdotti = "prodotti";
     $tabellaUtenti = "utenti";
     
-    if ($db_creato == false) { // Questa variebile va settata prima di "require_once("connection.php");". 
+    if ($db_da_creare == true) { // Questa variebile va settata prima di "require_once("connection.php");". 
                                 //Di default è falso e verrà quindi creato il db
         echo "connessione no db";
         $connessione = new mysqli("localhost", "root", "");

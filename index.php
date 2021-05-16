@@ -17,7 +17,8 @@
             <li><a class="active" href="index.php">Home</a></li>
             <li><a href="fiori.php">Fiori</a></li>
             <li><a href="frutta.php">Frutta</a></li>
-            <li><a href="carta.php">Carta di auguri</a></li>
+            <li><a href="aggiungiProdottiVendita.php">Aggiungi altri Prodotti al sito</a></li>
+            <li><a href="altriProdotti.php">Altri Prodotti dal sito</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
 

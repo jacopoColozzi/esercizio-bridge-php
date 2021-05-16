@@ -16,6 +16,7 @@
     $query = "create table $tabellaProdotti ( 
         codice integer NOT NULL auto_increment PRIMARY KEY,
         nome varchar(40), 
+        descrizione varchar(100),
         disponibilita integer,
         prezzo integer
      )";
@@ -40,7 +41,7 @@
     }
     $queryfiori = "create table $tabellaFiori ( 
         nome varchar(40) NOT NULL PRIMARY KEY,
-        descrizione varchar(100) ,
+        descrizione varchar(100),
         percorso varchar(200) NOT NULL,
         prezzo float NOT NULL, 
         disponibilita integer NOT NULL

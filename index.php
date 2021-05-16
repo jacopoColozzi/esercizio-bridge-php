@@ -13,6 +13,7 @@
         <title>Sito di esposizione</title>
     </head>
     <body>
+    <h2>Benvenuto sul nostro sito di esposizione</h2>
         <ul class="navi">
             <li><a class="active" href="index.php">Home</a></li>
             <li><a href="fiori.php">Fiori</a></li>

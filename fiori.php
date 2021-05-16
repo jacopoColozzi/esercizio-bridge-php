@@ -18,7 +18,6 @@
     </head>
     <body>
 
-        <h2>Benvenuto sul nostro sito di esposizione</h2>
         <p><strong>qui ti presentiamo i nostri fiori</strong></p>
         <p>se ti interessano, le puoi comprare nella pagine dei fiori</p>
         <?php 

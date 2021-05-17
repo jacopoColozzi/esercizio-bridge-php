@@ -18,7 +18,7 @@
     require_once("connection.php");
     if(!isset($_POST['invio'])) {
         ?>
-        <h1> Metti in vendita i tuoi prodotti </h1>
+        <h2> Metti in vendita i tuoi prodotti </h2>
         <form action= <?php echo "\"{$_SERVER['PHP_SELF']}\""?> method="POST">
         <p>Nome: <input type="text" name="nome" /> </p>
         <p>Disponibilit&agrave;: <input type="number" name="disp" /> </p>

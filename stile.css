@@ -48,7 +48,7 @@ input[type=text], select {
   input[type=submit]:hover {
     background-color: #45a049;
   }
-  .navi ul {
+  ul.navi {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -56,11 +56,7 @@ input[type=text], select {
     background-color: #333;
   }
   
-  .navi ul li {
-    float: left;
-  }
-  
-  .navi ul li a {
+  ul.navi, li.navi, a.navi {
     display: block;
     color: white;
     text-align: center;
@@ -74,6 +70,7 @@ input[type=text], select {
   
   .active {
     background-color: #4CAF50;
+    float: left;
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

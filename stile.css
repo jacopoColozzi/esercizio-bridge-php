@@ -48,26 +48,24 @@ input[type=text], select {
   input[type=submit]:hover {
     background-color: #45a049;
   }
+  
   ul.navi {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  ul.navi, li.navi, a.navi {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    font-size: 30;
     text-decoration: none;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
-  
-  .navi ul li a:hover:not(.active) {
-    background-color: #111;
+
+  .navi > ul > li > a:visited{
+    text-decoration: none;
+    color: #0000AA;
   }
-  
+
+  .navi > ul > li > a:hover{
+    text-decoration: none;
+    color: gray;
+  }
   .active {
     background-color: #4CAF50;
     float: left;

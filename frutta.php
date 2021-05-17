@@ -15,8 +15,7 @@
     </head>
     <body>
     <div class="Home"> <a class="active" href="index.php">Home</a> </div>
-        <p><strong>Qui ti presentiamo la nostra frutta</strong></p>
-        <p>se ti interessa, la puoi comprare nella pagine della frutta</p>
+        <h2>Ti presentiamo la nostra frutta</h2>
         <form action= <?php echo "\"{$_SERVER['PHP_SELF']}\""?> method="POST">
         <?php 
         $qselect1 = "SELECT * FROM $tabellaFrutta";

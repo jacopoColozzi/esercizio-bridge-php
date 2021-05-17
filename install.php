@@ -14,10 +14,9 @@
     require("connection.php");
     
     $query = "create table $tabellaProdotti ( 
-        codice integer NOT NULL auto_increment PRIMARY KEY,
-        nome varchar(40), 
+        nome varchar(40) PRIMARY KEY, 
         prezzo float NOT NULL,
-        disponibilita integer
+        disponibilita integer NOT NULL
      )";
     if ($resultQ = mysqli_query($connessione, $query)) {
         printf("Tabella Prodotti creata <br />");

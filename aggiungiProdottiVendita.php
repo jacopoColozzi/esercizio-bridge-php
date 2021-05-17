@@ -28,7 +28,7 @@
         </form>
         <?php
             } else {
-                $query = "insert into $tabellaProdotti values('0', '{$_POST['nome']}', '{$_POST['disp']}', '{$_POST['prezzo']}')";
+                $query = "insert into $tabellaProdotti values( '{$_POST['nome']}', '{$_POST['disp']}', '{$_POST['prezzo']}')";
                 $risultato=mysqli_query($connessione, $query);
                     if($risultato) {
                         echo "<p>Inserito Correttamente</p>";

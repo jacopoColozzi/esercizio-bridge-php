@@ -18,7 +18,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
-<h3>
 <hr />
 Grazie della visita, ciao ciao
 <hr />

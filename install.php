@@ -16,7 +16,6 @@
     $query = "create table $tabellaProdotti ( 
         codice integer NOT NULL auto_increment PRIMARY KEY,
         nome varchar(40), 
-        percorso varchar(200) NOT NULL,
         prezzo float NOT NULL,
         disponibilita integer
      )";
@@ -53,16 +52,15 @@
         disponibilita integer NOT NULL
         )";
     
+    eseguiQuery($connessione,$queryfiori);
+    eseguiQuery($connessione,$queryfrutta);
 
     $query = "INSERT INTO $tabellaUtenti
 	(IdUtente, username, password, TotaleAquisti)
 	VALUES
 	('0', 'atangana95', '12345', '0')
 	";
-
     eseguiQuery($connessione, $query);
-    eseguiQuery($connessione,$queryfiori);
-    eseguiQuery($connessione,$queryfrutta);
     eseguiQuery($connessione, "insert into $tabellaUtenti VALUES ('90', 'Jacopo', 'pass1', '0')");
 
 

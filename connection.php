@@ -1,11 +1,11 @@
 <?php
-    $nomeDB = "lweb8";
+    $nomeDB = "database_esposizione";
     $tabellaProdotti = "prodotti";
     $tabellaUtenti = "utenti";
     $tabellaFrutta = "frutta";
     $tabellaFiori = "fiori";
-    $utente = "lweb8";
-    $password = "lweb8";
+    $utente = "root";
+    $password = "";
 
     if ($db_da_creare == true) { // Questa variebile va settata prima di "require_once("connection.php");". 
                                 //Di default è falso e verrà quindi non creato il db
